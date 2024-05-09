@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search App</title>
+    <style>
+      body {
+        font-family: Tahoma;
+        margin: 0;
+        padding: 40px;
+        background-color: #00ff2a;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #00ff2a;
+        padding: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      #movie-search-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      #movie-search-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        flex-grow: 1;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: hsl(211, 100%, 35%);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff0000;
+      }
+
+      #movie-details {
+        background-color: #00ff2a;
+        border: 5px solid #4ddbff;
+        border-radius: 4px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      #movie-poster {
+        max-width: 100%;
+        border: 5px solid #4ddbff;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .movie-title {
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .movie-release-year {
+        color: #000000;
+      }
+
+      .error-message {
+        color: #a94442;
+        background-color: #f2dede;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ebccd1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Search</h1>
+      <form id="movie-search-form">
+        <input
+          type="text"
+          id="movie-search-input"
+          placeholder="Enter a movie title..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="movie-details">
+        Please search for a movie to see the details here.
+      </div>
+      <img id="movie-poster" src="" alt="" hidden />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
